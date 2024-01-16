@@ -1,46 +1,100 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.div`
-    height: 50px;
-    background-color: #515151;
+    padding: 40px 6%;
     display: flex;
-    justify-content: center;
-    padding: 0px 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    background-color: hsl(233, 26%, 24%);
+
+    @media (min-width: 1024px) {
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 150px;
+    }
 `;
 
-export const LeftSide = styled.div`
+export const FirstPart = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
 
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        gap: 10vw;
+    }
 `;
 
-export const PartOne = styled.div`
-    
+export const ColumnContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: 1024px) {
+        justify-content: center;
+    }
 `;
 
-export const LogoEasy = styled.img`
+export const LogoImg = styled.img`
   
 `;
 
-export const RedeSocial = styled.button`
+export const List = styled.ul`
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    @media (min-width: 1024px) {
+        align-items: start;
+        min-width: 120px;
+    }
+
+    &.col {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .socialMediaImg {
+        svg path {
+            transition: fill 0.5s ease-in-out;
+        }
+
+        &:hover svg path {
+        fill: var(--LimeGreen);
+        }
+    }
+`
+
+export const Item = styled.a`
   
 `;
 
-export const PartTwo = styled.div`
-  
+export const ListLinksContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+    }
 `;
 
-export const Links = styled.button`
-  
+export const Link = styled.a`
+    transition: 0.5s ease-in-out;
+    &:hover {
+        color: hsl(136, 65%, 51%);
+    }
 `;
 
-export const PartThree = styled.div`
-  
-`;
-
-
-export const RightSide = styled.div`
-  
-`;
-
-export const Copyright = styled.p`
-    color: #fff;
+export const FooterParagraph = styled.p`
+    font-size: 0.825rem;
+    color: hsl(233, 8%, 62%);
+    line-height: 1.5rem;
+    text-align: center;
 `;

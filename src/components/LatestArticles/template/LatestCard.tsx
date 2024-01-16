@@ -1,4 +1,4 @@
-import { ArticleAuthor, ArticleCardContainer, ArticleImg, ArticleSummary, ArticleTitle } from "./LatestCardStyle";
+import { ArticleAuthor, ArticleCardContainer, ArticleImg, ArticleSummary, ArticleText, ArticleTitle } from "./LatestCardStyle";
 
 interface ArticleCardProps {
     ArticleIcon: any,
@@ -11,9 +11,11 @@ function ArticleCard({ArticleIcon, Author, Title, Summary}:ArticleCardProps) {
     return (
         <ArticleCardContainer>
             <ArticleImg src={ArticleIcon}/>
-            <ArticleAuthor>{Author}</ArticleAuthor>
-            <ArticleTitle>{Title}</ArticleTitle>
-            <ArticleSummary>{Summary}</ArticleSummary>
+            <ArticleText>
+                <ArticleAuthor>{Author}</ArticleAuthor>
+                <ArticleTitle>{Title}</ArticleTitle>
+                <ArticleSummary>{Summary}</ArticleSummary>
+            </ArticleText>
         </ArticleCardContainer>
     )
 }

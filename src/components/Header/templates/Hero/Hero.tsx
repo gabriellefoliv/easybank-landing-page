@@ -1,12 +1,12 @@
-import { HeroBackground, HeroContainer, HeroImg, HeroImgContainer, HeroP, HeroTitle, TextContainer } from "./HeroStyle"
-
-import HeroImgPic from '../../../../images/image-mockups.png'
-import HeroBack from '../../../../images/bg-intro-desktop.svg'
-import { RequestInvite2 } from "./HeroStyle"
+import { HeroContainer, HeroImg, HeroBg, HeroP, HeroTitle, TextContainer, HeroButton } from "./HeroStyle"
+import Mockups from '../../../../images/image-mockups.png'
 
 function Hero() {
     return(
         <HeroContainer>
+            <HeroBg>
+                <HeroImg src={Mockups}/>
+            </HeroBg>
             <TextContainer>
                 <HeroTitle>Next generation digital banking</HeroTitle>
                 <HeroP>
@@ -14,12 +14,8 @@ function Hero() {
                     will be a one-stop-shop for spending, saving, budgeting,
                     investing, and much more.
                 </HeroP>
-                <RequestInvite2>Request Invite</RequestInvite2>
+                <HeroButton>Request Invite</HeroButton>
             </TextContainer>
-            <HeroImgContainer>
-                <HeroBackground src={HeroBack}/>
-                <HeroImg src={HeroImgPic}/>
-            </HeroImgContainer>
         </HeroContainer>
     )
 }

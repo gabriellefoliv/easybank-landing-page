@@ -1,22 +1,26 @@
 import styled from "styled-components";
 
 export const ArticleCardContainer = styled.div`
-    width: 300px;
-    height: 400px;
-    /* box-shadow:; */
+    width: 100%;
+    background-color: #fff;
     border-radius: 10px;
+    -webkit-box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.25);
+    cursor: pointer;
     
 `;
 
 export const ArticleImg = styled.img`
-    width: 300px;
-    height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
+    width: 100%;
+    min-height: 175px;
+    max-height: 250px;
+    height: 40vw;
+    border-radius: 10px 10px 0 0;
 `;
 
 export const ArticleAuthor = styled.p`
-    font-size: 15px;
+    font-size: 14px;
     padding: 5px 0px;
     color: gray;
 `;
@@ -27,4 +31,11 @@ export const ArticleTitle = styled.h3`
 
 export const ArticleSummary = styled.p`
     font-size: 18px;
+`;
+
+export const ArticleText = styled.div`
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 `;
