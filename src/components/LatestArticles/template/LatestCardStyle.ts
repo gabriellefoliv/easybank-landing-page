@@ -8,6 +8,11 @@ export const ArticleCardContainer = styled.div`
     -moz-box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.25);
     box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.25);
     cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.7);
+        transition: 0.3s;
+    }
     
 `;
 
@@ -27,6 +32,10 @@ export const ArticleAuthor = styled.p`
 
 export const ArticleTitle = styled.h3`
     padding: 5px 0;
+
+    &:hover {
+        color: green;
+    }
 `;
 
 export const ArticleSummary = styled.p`
